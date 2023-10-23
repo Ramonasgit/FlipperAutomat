@@ -9,21 +9,28 @@ public class ReadyState implements State {
 
     @Override
     public void insertCoin() {
-        // Logik für insertCoin im ReadyState
+        pinballMachine.addCredit();
+        System.out.println("Credit added. Total credits: " + pinballMachine.getCredits());
     }
 
     @Override
     public void pressStart() {
-        // Logik für pressStart im ReadyState
+        if(pinballMachine.getCredits() > 0) {
+            pinballMachine.consumeCredit();
+            pinballMachine.setState(pinballMachine.getPlayingState());
+            System.out.println("Game started. Remaining credits: " + pinballMachine.getCredits());
+        } else {
+            System.out.println("Not enough credits to start the game.");
+        }
     }
 
     @Override
     public void play() {
-        // Logik für play im ReadyState
+        System.out.println("Press start to begin playing.");
     }
 
     @Override
     public void loseBall() {
-        // Logik für loseBall im ReadyState
+        System.out.println("Press start to begin playing.");
     }
 }

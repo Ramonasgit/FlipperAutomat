@@ -1,13 +1,24 @@
 package com.flipperautomat.composite;
 
+import com.flipperautomat.command.Command;
+import com.flipperautomat.mediator.FlipperMediator;
+
 public class Bumper extends GameComponent {
 
-    public Bumper(String name) {
-        super(name);
+    private final FlipperMediator mediator;
+
+    public Bumper(FlipperMediator mediator, Command command) {
+        this.mediator = mediator;
+        this.command = command;
+        mediator.addTarget(this);
     }
 
     @Override
-    public void play() {
-        System.out.println("Bumping at " + name);
+    public void hit() {
+        command.execute();
+        for (GameComponent child : children) {
+            child.hit();
+        }
+        mediator.targetHit(this);
     }
 }
