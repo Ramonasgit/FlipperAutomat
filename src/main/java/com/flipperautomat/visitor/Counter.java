@@ -16,7 +16,7 @@ public class Counter implements Visitor {
     public void visit(Bumper bumper) {
         if (bumper.getHitCount() >= 4) {
             score += 10000;
-            System.out.println("You earned a bonus of 10,000 points!");
+            System.out.println("Du hast einen Bonus von 10,000 Punkten bekommen!");
         }
     }
 
@@ -32,7 +32,7 @@ public class Counter implements Visitor {
     public void visit(Kicker kicker) {
         if (kicker.getHitCount() >= 3) {
             score += 1000;
-            System.out.println("You earned a bonus of 1,000 points!");
+            System.out.println("Du hast einen Bonus von 1,000 Punkten bekommen!");
         }
     }
 
@@ -40,7 +40,7 @@ public class Counter implements Visitor {
     public void visit(Ramp ramp) {
         if (ramp.isOpened() && ramp.getHitCount() >= 2) {
             score += 5000;
-            System.out.println("You earned a bonus of 5,000 points!");
+            System.out.println("Du hast einen Bonus von 5,000 Punkten bekommen!");
         }
     }
 
@@ -48,7 +48,7 @@ public class Counter implements Visitor {
     public void visit(Spinner spinner) {
         if (spinner.getHitCount() > 2) {
             score += 3000;
-            System.out.println("You earned a bonus of 3,000 points!");
+            System.out.println("Du hast einen Bonus von 3,000 Punkten bekommen!");
         }
     }
 
@@ -56,7 +56,7 @@ public class Counter implements Visitor {
     public void visit(Target target) {
         if (target.getHitCount() > 3) {
             score += 500;
-            System.out.println("You earned a bonus of 500 points!");
+            System.out.println("Du hast einen Bonus von 500 Punkten bekommen!");
         }
     }
 

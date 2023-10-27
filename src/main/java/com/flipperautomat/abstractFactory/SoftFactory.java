@@ -7,8 +7,7 @@ public class SoftFactory implements MainFactory {
     private Ball ball3 = new Ball3();
     private Gameover gameover = new Gameover1();
 
-    public SoftFactory() {
-    }
+
 
     @Override
     public String createBall1() {

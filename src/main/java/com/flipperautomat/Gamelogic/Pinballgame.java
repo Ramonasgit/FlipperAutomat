@@ -119,11 +119,11 @@ public class Pinballgame {
 
     public void styleChoice(Scanner scanner) {
         System.out.println("Such dir deinen persönlichen Stil aus:");
-        System.out.println("1.Soft:");
-        System.out.println(new Ball12().display());
-        System.out.println("********************************************** ODER **********************************************");
-        System.out.println("2.Slant:");
+        System.out.println("Wahl 1:");
         System.out.println(new Ball1().display());
+        System.out.println("********************************************** ODER **********************************************");
+        System.out.println("Wahl 2:");
+        System.out.println(new Ball12().display());
         boolean unavailableChoice = true;
         while (unavailableChoice) {
             System.out.print("\n Deine Wahl ist:\n");
